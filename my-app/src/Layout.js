@@ -29,12 +29,35 @@ function Layout({ children, redirectToLogin, redirectToSignup }) {
       </header>
 
       <main>
-        <Navbar />
-        <Carousel />
-        {children}
-      </main>
+  <Navbar />
+  
+  <div class="main-container">
+    <div class="left-menu">
+    <button class="menu-button-1">Botón 1</button>
+    <button class="menu-button-2">Botón 2</button>
+    <button class="menu-button-3">Botón 3</button>
+    </div>
+    <div class="center-content">
+    <Carousel />
+      <p class="parrafo1">
+        Aliquip proident pariatur est sunt laborum esse dolore tempor sit.
+        Dolor minim dolor excepteur dolor. Id velit tempor reprehenderit
+        adipisicing id anim minim id magna et aliqua exercitation. Mollit
+        consectetur pariatur Lorem veniam minim cillum id nulla mollit
+        consequat amet. Velit exercitation ea officia ex culpa eiusmod
+        voluptate velit. Nostrud aute est officia consecteturet non sint
+        cillum ullamco. Ea exercitation elit velit excepteur non. Nulla
+        eiusmod laboris nostrud duis minim.
+      </p>
+
+    </div>
+    <div class="right-menu">
+
+    </div>
+  </div>
+</main>
       <footer>
-        <p>Pie de página</p>
+        <h3>Todos los derechos Reservados</h3>
       </footer>
     </div>
   );
@@ -52,6 +75,11 @@ function Carousel() {
     "https://elcomercio.pe/resizer/V5_M2YGcSPvxILQvhH14ueVTYJw=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/NVBIMURKOVEDXAYI6RWI42YK4U.jpg",
     "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/G7DCA3VDNJADZN7OPGF2K2Y2VM.jpeg",
     "https://elcomercio.pe/resizer/V5_M2YGcSPvxILQvhH14ueVTYJw=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/NVBIMURKOVEDXAYI6RWI42YK4U.jpg",
+    "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/G7DCA3VDNJADZN7OPGF2K2Y2VM.jpeg",
+    "https://elcomercio.pe/resizer/V5_M2YGcSPvxILQvhH14ueVTYJw=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/NVBIMURKOVEDXAYI6RWI42YK4U.jpg",
+    "https://cloudfront-us-east-1.images.arcpublishing.com/elespectador/G7DCA3VDNJADZN7OPGF2K2Y2VM.jpeg",
+    "https://elcomercio.pe/resizer/V5_M2YGcSPvxILQvhH14ueVTYJw=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/NVBIMURKOVEDXAYI6RWI42YK4U.jpg",
+  
   ];
 
   // Función para desplazar el carrusel a la siguiente imagen
@@ -63,7 +91,7 @@ function Carousel() {
   useEffect(() => {
     const interval = setInterval(goToNextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   // Actualizar la posición del carrusel cuando cambia el índice de la imagen actual
   useEffect(() => {
